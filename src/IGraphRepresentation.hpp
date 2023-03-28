@@ -4,6 +4,8 @@
 class IGraphRepresentation
 {
 private:
+public:
+    
 };
 
 #endif

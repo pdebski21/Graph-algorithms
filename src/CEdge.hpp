@@ -7,6 +7,12 @@ private:
     int m_beg;
     int m_end;
     double m_weight;
+
+public:
+    int getBeg();
+    int getEnd();
+    double getWeight();
 };
+
 
 #endif
