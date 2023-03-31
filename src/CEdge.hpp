@@ -12,7 +12,9 @@ public:
     int getBeg();
     int getEnd();
     double getWeight();
+    void setBeg(int beg);
+    void setEnd(int end);
+    void setWeight(double weight);
 };
-
 
 #endif

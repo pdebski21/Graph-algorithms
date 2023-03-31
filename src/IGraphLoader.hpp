@@ -2,9 +2,13 @@
 #define IGRAPHLOADER_HPP
 
 #include "IGraphLoader.hpp"
+#include "CGraph.hpp"
+#include <memory>
 
-class IGraphLoader : public IGraphLoader
+class IGraphLoader
 {
+public:
+    virtual std::unique_ptr<CGraph> makeGraph() = 0;
 };
 
 #endif

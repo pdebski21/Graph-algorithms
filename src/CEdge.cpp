@@ -12,3 +12,15 @@ double CEdge::getWeight()
 {
     return m_weight;
 }
+void CEdge::setBeg(int beg)
+{
+    m_beg = beg;
+}
+void CEdge::setEnd(int end)
+{
+    m_end = end;
+}
+void CEdge::setWeight(double weight)
+{
+    m_weight = weight;
+}
