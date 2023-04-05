@@ -20,10 +20,14 @@ class CGraph
 private:
     int m_edgesCount;
     int m_verticesCount;
-    std::unique_ptr<IGraphRepresentation> m_representation;
+    std::shared_ptr<IGraphRepresentation> m_representation;
 
 public:
     CGraph(int edgesCount, int verticesCount, std::vector<CEdge> &edges, representationType type);
+
+    int getEdgesCount();
+    int getVerticesCount();
+    std::shared_ptr<IGraphRepresentation> getRepresentation();
 };
 
 #endif

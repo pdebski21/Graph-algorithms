@@ -1,5 +1,9 @@
 #include "CGraphFileLoader.hpp"
 
+CGraphFileLoader::CGraphFileLoader(std::string path, representationType type) : m_path(path), m_type(type)
+{
+}
+
 std::unique_ptr<CGraph> CGraphFileLoader::makeGraph()
 {
     int edgesCount, verticesCount, beg, end;

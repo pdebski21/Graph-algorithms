@@ -15,7 +15,8 @@ private:
 
 public:
     CAdjacencyList(int verticesCount, std::vector<CEdge> &edges);
-    double getWeight(int beg, int end);
+    double getWeight(int beg, int end) override;
+    std::forward_list<std::pair<int, double>> getAdjacentVertices(int vertex) override;
 };
 
 #endif

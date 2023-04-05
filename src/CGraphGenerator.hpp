@@ -17,7 +17,7 @@ private:
     constexpr int calcEdgesFromDensity();
 
 public:
-    CGraphGenerator(int verticesCount, int density);
+    CGraphGenerator(int verticesCount, int density, representationType type);
     std::unique_ptr<CGraph> makeGraph() override;
 };
 

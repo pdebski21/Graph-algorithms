@@ -4,6 +4,7 @@
 #include "IGraphRepresentation.hpp"
 #include "CEdge.hpp"
 #include <vector>
+#include <forward_list>
 
 class CAdjacencyMatrix : public IGraphRepresentation
 {
@@ -12,7 +13,8 @@ private:
 
 public:
     CAdjacencyMatrix(int verticesCount, std::vector<CEdge> &edges);
-    double getWeight(int beg, int end);
+    double getWeight(int beg, int end) override;
+    std::forward_list<std::pair<int, double>> getAdjacentVertices(int vertex) override;
 };
 
 #endif

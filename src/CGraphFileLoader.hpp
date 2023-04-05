@@ -20,6 +20,7 @@ private:
     representationType m_type;
 
 public:
+    CGraphFileLoader(std::string path, representationType type);
     std::unique_ptr<CGraph> makeGraph() override;
 };
 

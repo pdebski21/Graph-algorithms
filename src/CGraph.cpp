@@ -14,3 +14,16 @@ CGraph::CGraph(int edgesCount, int verticesCount, std::vector<CEdge> &edges, rep
         throw RepresentationtypeException("Undefined representation type!");
     }
 }
+
+int CGraph::getEdgesCount()
+{
+    return m_edgesCount;
+}
+int CGraph::getVerticesCount()
+{
+    return m_verticesCount;
+}
+std::shared_ptr<IGraphRepresentation> CGraph::getRepresentation()
+{
+    return m_representation;
+}

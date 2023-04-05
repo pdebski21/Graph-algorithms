@@ -15,3 +15,8 @@ double CAdjacencyList::getWeight(int beg, int end)
                       { return node.first == end; });
     return it != m_adjacencyList[beg].end() ? it->second : 0;
 }
+
+std::forward_list<std::pair<int, double>> CAdjacencyList::getAdjacentVertices(int vertex)
+{
+    return m_adjacencyList[vertex];
+}

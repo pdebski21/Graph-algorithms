@@ -5,7 +5,8 @@ constexpr int CGraphGenerator::calcEdgesFromDensity()
     return m_density * m_verticesCount * (m_verticesCount - 1);
 }
 
-CGraphGenerator::CGraphGenerator(int verticesCount, int density) : m_verticesCount(verticesCount), m_density(density)
+CGraphGenerator::CGraphGenerator(int verticesCount, int density, representationType type) : m_verticesCount(verticesCount), m_density(density),
+                                                                                            m_type(type)
 {
 }
 

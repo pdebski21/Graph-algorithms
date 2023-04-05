@@ -3,10 +3,17 @@
 
 #include "CGraph.hpp"
 
+enum algorithmType
+{
+    DFS = 0,
+    BFS = 1,
+    SP = 2,
+    MST = 3,
+};
+
 class IAlgorithm
 {
-private:
-    std::unique_ptr<CGraph> m_graph;
+protected:
 
 public:
     virtual void execute() = 0;
