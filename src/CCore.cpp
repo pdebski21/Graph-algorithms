@@ -15,8 +15,8 @@ std::shared_ptr<CCore> CCore::GetInstance()
 
 std::unique_ptr<IAlgorithm> CCore::ScheduleAlgorithms()
 {
-    //std::unique_ptr<IGraphLoader> graphLoader = std::make_unique<CGraphGenerator>(8, 0.4, representationType::adjacencyList);
-    std::unique_ptr<IGraphLoader> graphLoader = std::make_unique<CGraphFileLoader>("./data/graph1.txt", representationType::adjacencyMatrix);
+    std::unique_ptr<IGraphLoader> graphLoader = std::make_unique<CGraphGenerator>(8, 0.4, representationType::adjacencyList);
+    //std::unique_ptr<IGraphLoader> graphLoader = std::make_unique<CGraphFileLoader>("./data/graph1.txt", representationType::adjacencyList);
     auto graph = graphLoader->makeGraph();
 
     for (int i = 0; i < graph->getVerticesCount(); ++i)
@@ -27,11 +27,9 @@ std::unique_ptr<IAlgorithm> CCore::ScheduleAlgorithms()
         }
     }
 
-    std::unique_ptr<IAlgorithm> algorithm = std::make_unique<CAlgorithmBFS>(std::move(graph), 1);
-    std::cout << "here" << std::endl;
+    std::unique_ptr<IAlgorithm> algorithm = std::make_unique<CAlgorithmDFS>(std::move(graph), 1);
 
     algorithm->execute();
-    std::cout << "here" << std::endl;
 
     return algorithm;
 }

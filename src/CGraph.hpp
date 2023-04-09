@@ -30,4 +30,5 @@ public:
     std::shared_ptr<IGraphRepresentation> getRepresentation();
 };
 
+
 #endif

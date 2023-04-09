@@ -2,6 +2,8 @@
 #define IALGORITHM_HPP
 
 #include "CGraph.hpp"
+#include <iostream>
+#include <vector>
 
 enum algorithmType
 {
@@ -14,9 +16,9 @@ enum algorithmType
 class IAlgorithm
 {
 protected:
-
 public:
     virtual void execute() = 0;
+    virtual void presentResult() = 0;
 };
 
 #endif

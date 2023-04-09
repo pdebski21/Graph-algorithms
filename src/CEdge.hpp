@@ -9,6 +9,9 @@ private:
     double m_weight;
 
 public:
+    CEdge();
+    CEdge(int beg, int end, double weight);
+
     int getBeg();
     int getEnd();
     double getWeight();

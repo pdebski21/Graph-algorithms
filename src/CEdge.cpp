@@ -1,5 +1,11 @@
 #include "CEdge.hpp"
 
+CEdge::CEdge()
+{
+}
+CEdge::CEdge(int beg, int end, double weight) : m_beg(beg), m_end(end), m_weight(weight)
+{
+}
 int CEdge::getBeg()
 {
     return m_beg;

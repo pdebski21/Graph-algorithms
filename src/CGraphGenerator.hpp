@@ -5,19 +5,22 @@
 #include "CEdge.hpp"
 #include "CGraph.hpp"
 #include <vector>
+#include <ctime>
+#include <iostream>
+
+#define MAX_WEIGHT 30
 
 class CGraphGenerator : public IGraphLoader
 {
 private:
     int m_verticesCount;
-    int m_density;
-    int m_maxWeight;
+    double m_density;
     representationType m_type;
 
-    constexpr int calcEdgesFromDensity();
+    int calcEdgesFromDensity();
 
 public:
-    CGraphGenerator(int verticesCount, int density, representationType type);
+    CGraphGenerator(int verticesCount, double density, representationType type);
     std::unique_ptr<CGraph> makeGraph() override;
 };
 

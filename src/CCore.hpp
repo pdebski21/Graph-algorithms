@@ -3,9 +3,11 @@
 
 #include "CGraphGenerator.hpp"
 #include "CAlgorithmBFS.hpp"
+#include "CAlgorithmDFS.hpp"
 #include "CGraphFileLoader.hpp"
 #include <memory>
 #include <iostream>
+
 class CCore
 {
 protected:

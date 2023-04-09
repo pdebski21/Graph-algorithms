@@ -8,7 +8,7 @@ std::unique_ptr<CGraph> CGraphFileLoader::makeGraph()
 {
     int edgesCount, verticesCount, beg, end;
     double weight;
-    std::vector<CEdge> edges(verticesCount);
+    std::vector<CEdge> edges;
     std::ifstream graphFile(m_path);
 
     try
@@ -20,9 +20,8 @@ std::unique_ptr<CGraph> CGraphFileLoader::makeGraph()
             graphFile >> beg;
             graphFile >> end;
             graphFile >> weight;
-            edges[i].setBeg(beg);
-            edges[i].setEnd(end);
-            edges[i].setWeight(weight);
+            auto edge = CEdge(beg, end, weight);
+            edges.push_back(edge);
         }
     }
     catch (std::exception const &e)
