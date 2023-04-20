@@ -20,3 +20,18 @@ std::forward_list<std::pair<int, double>> CAdjacencyList::getAdjacentVertices(in
 {
     return m_adjacencyList[vertex];
 }
+
+std::vector<CEdge> CAdjacencyList::getAllEdges()
+{
+    std::vector<CEdge> edges;
+    int size = m_adjacencyList.size();
+    for (int i = 0; i < size; ++i)
+    {
+        for (auto &e : m_adjacencyList[i])
+        {
+            edges.push_back(CEdge(i, e.first, e.second));
+        }
+    }
+
+    return edges;
+}

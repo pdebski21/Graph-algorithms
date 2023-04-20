@@ -15,6 +15,7 @@ public:
     CAdjacencyMatrix(int verticesCount, std::vector<CEdge> &edges);
     double getWeight(int beg, int end) override;
     std::forward_list<std::pair<int, double>> getAdjacentVertices(int vertex) override;
+    std::vector<CEdge> getAllEdges() override;
 };
 
 #endif

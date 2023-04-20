@@ -27,3 +27,22 @@ std::forward_list<std::pair<int, double>> CAdjacencyMatrix::getAdjacentVertices(
     }
     return adjacentVertices;
 }
+
+std::vector<CEdge> CAdjacencyMatrix::getAllEdges()
+{
+    int size = m_adjacencyMatrix.size();
+    std::vector<CEdge> edges;
+    for (int i = 0; i < size; ++i)
+    {
+        for (int j = 0; j < size; ++j)
+        {
+            auto weight = getWeight(i, j);
+            if (weight != 0)
+            {
+                edges.push_back(CEdge(i, j, weight));
+            }
+        }
+    }
+
+    return edges;
+}

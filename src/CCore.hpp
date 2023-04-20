@@ -4,6 +4,8 @@
 #include "CGraphGenerator.hpp"
 #include "CAlgorithmBFS.hpp"
 #include "CAlgorithmDFS.hpp"
+#include "CAlgorithmSP.hpp"
+#include "CAlgorithmMST.hpp"
 #include "CGraphFileLoader.hpp"
 #include <memory>
 #include <iostream>

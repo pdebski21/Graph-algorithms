@@ -30,3 +30,8 @@ void CEdge::setWeight(double weight)
 {
     m_weight = weight;
 }
+
+bool CEdge::operator<(CEdge &another)
+{
+    return this->getWeight() < another.getWeight();
+}

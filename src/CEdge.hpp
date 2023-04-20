@@ -18,6 +18,8 @@ public:
     void setBeg(int beg);
     void setEnd(int end);
     void setWeight(double weight);
+    bool operator<(CEdge &another);
 };
+
 
 #endif

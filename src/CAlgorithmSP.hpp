@@ -1,26 +1,24 @@
 #ifndef CALGORITHMSP_HPP
 #define CALGORITHMSP_HPP
 
+#include "IAlgorithm.hpp"
 #include "CGraph.hpp"
 #include <vector>
 #include <memory>
+#include <bits/stdc++.h>
 
-struct resultSP
-{
-    int distance;
-    std::vector<int> path;
-}
-
-class CAlgorithmSP
+class CAlgorithmSP : public IAlgorithm
 {
 private:
     std::unique_ptr<CGraph> m_graph;
-    resultSP m_result;
+    std::vector<double> m_result;
     int m_start;
-    int m_end;
+
+    int minDistance(const std::vector<double> &distances, const std::vector<bool> &visited);
 
 public:
-    CAlgorithmSP(std::unique_ptr<CGraph> graph, int start, int end);
+    CAlgorithmSP(std::unique_ptr<CGraph> graph, int start);
+
     void execute() override;
     void presentResult() override;
 };
