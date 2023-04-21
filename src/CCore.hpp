@@ -7,6 +7,7 @@
 #include "CAlgorithmSP.hpp"
 #include "CAlgorithmMST.hpp"
 #include "CGraphFileLoader.hpp"
+#include "CCmdParser.hpp"
 #include <memory>
 #include <iostream>
 
@@ -21,7 +22,7 @@ public:
     void operator=(const CCore &) = delete;
 
     static std::shared_ptr<CCore> GetInstance();
-    std::unique_ptr<IAlgorithm> ScheduleAlgorithms();
+    std::unique_ptr<IAlgorithm> ScheduleAlgorithms(params &cmdParams);
 };
 
 #endif

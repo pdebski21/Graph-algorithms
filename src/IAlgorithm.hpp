@@ -15,7 +15,6 @@ enum algorithmType
 
 class IAlgorithm
 {
-protected:
 public:
     virtual void execute() = 0;
     virtual void presentResult() = 0;
